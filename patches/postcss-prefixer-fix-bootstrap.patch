@@ -1,0 +1,13 @@
+diff --git a/lib/utils.js b/lib/utils.js
+index c4b3bd35a49f68957adbde88e5e3fc7e58896bd3..abec01bc07b93f968aac0d2a53ac5f3c3815378a 100644
+--- a/lib/utils.js
++++ b/lib/utils.js
+@@ -24,7 +24,7 @@ module.exports = {
+   attrStringify({
+     type, operator, head, classes, foot,
+   }) {
+-    return `${type}${operator}${head}${classes.join(' ')}${foot}`;
++    return `${type ?? ''}${operator ?? ''}${head ?? ''}${classes?.join(' ') ?? ''}${foot ?? ''}`;
+   },
+ 
+ };

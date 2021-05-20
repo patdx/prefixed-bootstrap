@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test-css": "npx postcss styles/globals.css -o dist.css"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
     "next": "10.2.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -15,6 +18,10 @@
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "postcss-plugin-context": "^2.0.0",
+    "postcss-prefixer": "patch:postcss-prefixer@^2.1.2#./patches/postcss-prefixer-fix-bootstrap.patch",
     "tailwindcss": "^2.1.2"
   }
 }
